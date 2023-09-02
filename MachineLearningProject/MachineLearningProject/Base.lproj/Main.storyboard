@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MachineLearningProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JMA-p6-Ieg">
+                                <rect key="frame" x="16" y="59" width="361" height="388"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="388" id="Lhe-2b-CgY"/>
+                                    <constraint firstAttribute="width" constant="361" id="Puq-H1-s7V"/>
+                                    <constraint firstAttribute="height" constant="388" id="gXG-5i-YQY"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLT-91-rHL">
+                                <rect key="frame" x="16" y="533" width="361" height="98"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="98" id="P68-bt-GJY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0e-eg-cTH">
+                                <rect key="frame" x="155" y="751" width="83" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change"/>
+                                <connections>
+                                    <action selector="changeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="guq-8U-1Zn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JMA-p6-Ieg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8H9-1k-DDq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="A0e-eg-cTH" secondAttribute="bottom" constant="32" id="ElZ-qn-MKk"/>
+                            <constraint firstItem="JMA-p6-Ieg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="She-Wc-Rtj"/>
+                            <constraint firstItem="JMA-p6-Ieg" firstAttribute="trailing" secondItem="qLT-91-rHL" secondAttribute="trailing" id="gm1-NE-kMK"/>
+                            <constraint firstItem="qLT-91-rHL" firstAttribute="top" secondItem="JMA-p6-Ieg" secondAttribute="bottom" constant="86" id="kkw-ry-q04"/>
+                            <constraint firstItem="qLT-91-rHL" firstAttribute="centerX" secondItem="A0e-eg-cTH" secondAttribute="centerX" id="ktn-xN-TT5"/>
+                            <constraint firstItem="JMA-p6-Ieg" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="qW4-fc-R4S"/>
+                            <constraint firstItem="JMA-p6-Ieg" firstAttribute="leading" secondItem="qLT-91-rHL" secondAttribute="leading" id="xnY-hl-yur"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="JMA-p6-Ieg" id="Pqp-0d-8wM"/>
+                        <outlet property="resultLabel" destination="qLT-91-rHL" id="jSH-EY-nvu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
