@@ -6,11 +6,16 @@
 //
 
 import UIKit
+import CoreML
+import Vision
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+
+    // CIImage kullanmanin amaci CoreMl'de import ettigimiz MobileNetV2 modulunde image olarak CIImage kullanilmasidir. Dokumantasyondan bakabilirsin ayrintilara
+    var chosenImage = CIImage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,8 +40,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // dismiss edip kapatarak kendine tekrar donmemize saglar
         self.dismiss(animated: true)
         
+        if let ciImage = CIImage(image: imageView.image!) {
+            chosenImage = ciImage
+        }
         
         
+        recognizeImage(image: chosenImage)
+    }
+    // CI image kullanilarak image alinma islemi yapilir
+    func recognizeImage(image: CIImage) {
         
     }
     
