@@ -69,8 +69,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                             let confidenceLevel = (topResult?.confidence ?? 0) * 100
                             
                             // Yuzde icin dogru cevrim gostermede kullandik
-                            
-                            self.resultLabel.text = "\(confidenceLevel)" + "%: \(topResult!.identifier) "
+                            let rounded = Int(confidenceLevel * 100) / 100
+                            // ML buldugu sonucu ve yuzdesini yazdirir
+                            self.resultLabel.text = "\(rounded)" + "%: \(topResult!.identifier) "
                         }
                         
                     }
